@@ -114,11 +114,6 @@ _G.packer_plugins = {
     path = "/home/asmit/.local/share/nvim/site/pack/packer/start/friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
   },
-  harpoon = {
-    loaded = true,
-    path = "/home/asmit/.local/share/nvim/site/pack/packer/start/harpoon",
-    url = "https://github.com/ThePrimeagen/harpoon"
-  },
   ["lualine.nvim"] = {
     loaded = true,
     path = "/home/asmit/.local/share/nvim/site/pack/packer/start/lualine.nvim",

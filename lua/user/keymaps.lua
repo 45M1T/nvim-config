@@ -22,7 +22,6 @@ keymap("n", "<C-u>", "<C-u>zz", opts)
 
 
 -- LSP DIAGNOSTIC --
-local ops = { noremap = true, silent = true }
 keymap("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
 keymap("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
 keymap("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
@@ -48,9 +47,3 @@ keymap("n", "<leader>tr", "<cmd>ToggleTerm size=40 dir=~/Desktop direction=verti
 keymap("n", "<leader>bn", "<cmd>BufferLineCycleNext<CR>", opts)
 keymap("n", "<leader>bp", "<cmd>BufferLineCyclePrev<CR>", opts)
 keymap("n", "<leader>bc", "<cmd>bdelete<CR>", opts)
-
--- HARPOON --
-keymap("n", "<leader>ha", "<cmd>lua require('harpoon.mark').add_file()", opts)
-keymap("n", "<leader>hm", "<cmd>lua require('harpoon.ui').toggle_quick_menu()<CR>", opts)
-keymap("n", "<leader>hn", "<cmd>lua require('harpoon.ui').nav_next()<CR>", opts)
-keymap("n", "<leader>hp", "<cmd>lua require('harpoon.ui').nav_prev()<CR>", opts)
