@@ -5,6 +5,7 @@ require("mason-lspconfig").setup{
 
 require("lspconfig").lua_ls.setup {
   on_attach = on_attach;
+  capabilities = capabilities;
 }
 
 require("lspconfig").html.setup {
@@ -22,12 +23,17 @@ require("lspconfig").tsserver.setup {
   capabilities = capabilities,
 }
 
+require("lspconfig").clangd.setup {
+    on_attach = on_attach,
+    capabilities = capabilities,
+}
+
 local signs = {
 
-  { name = "DiagnosticSignError", text = " " },
-  { name = "DiagnosticSignWarn", text = " " },
-  { name = "DiagnosticSignHint", text = " " },
-  { name = "DiagnosticSignInfo", text = " " },
+  { name = "DiagnosticSignError", text = " " },
+  { name = "DiagnosticSignWarn", text = " " },
+  { name = "DiagnosticSignHint", text = " " },
+  { name = "DiagnosticSignInfo", text = " " },
 }
 
 for _, sign in ipairs(signs) do
@@ -55,9 +61,9 @@ local config = {
 vim.diagnostic.config(config)
 
 vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
-  border = "rounded",
+    border = "rounded",
 })
 
 vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, {
-  border = "rounded",
+    border = "rounded",
 })
